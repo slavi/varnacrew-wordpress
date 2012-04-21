@@ -27,6 +27,10 @@
 			<?php if (is_under("Fundraising")) wp_nav_menu( array('menu' => 'Fundraising', 'container' => false, )); ?>
 			<?php if (is_under("People Behind")) wp_nav_menu( array('menu' => 'People Behind', 'container' => false, )); ?>
 			<!-- Nav level 3 -->
-			<?php if (is_under("Workshops")) wp_nav_menu( array('menu' => 'Workshops', 'container' => false, )); ?>
+			<?php if (is_under("Academic Runs")) wp_nav_menu( array('menu' => 'Runs', 'container' => false, )); ?>
+			<?php if (is_under("Alumni Reunions")) wp_nav_menu( array('menu' => 'Reunions', 'container' => false, )); ?>
+			<?php if (is_under("Competitions")) wp_nav_menu( array('menu' => 'Competitions', 'container' => false, )); ?>
+			<?php if (is_under("LSE Summer School")) wp_nav_menu( array('menu' => 'LSE', 'container' => false, )); ?>
 			<?php if (is_under("Seminars")) wp_nav_menu( array('menu' => 'Seminars', 'container' => false, )); ?>
+			<?php if (is_under("Workshops")) wp_nav_menu( array('menu' => 'Workshops', 'container' => false, )); ?>
 		</div>
