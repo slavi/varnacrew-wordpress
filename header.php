@@ -28,5 +28,5 @@
 			<?php if (is_under("People Behind")) wp_nav_menu( array('menu' => 'People Behind', 'container' => false, )); ?>
 			<!-- Nav level 3 -->
 			<?php if (is_under("Workshops")) wp_nav_menu( array('menu' => 'Workshops', 'container' => false, )); ?>
-
+			<?php if (is_under("Seminars")) wp_nav_menu( array('menu' => 'Seminars', 'container' => false, )); ?>
 		</div>
