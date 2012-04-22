@@ -30,7 +30,9 @@ function get_attachments($post_id) {
   	foreach ( $attachments as $attachment ) {
   	  array_push($result, 
   	    array("title" => apply_filters( 'the_title' ,  $attachment->post_title), 
-  	          "link" => wp_get_attachment_link( $attachment->ID, '', false, false, 'Download')
+  	          "link" => wp_get_attachment_link( $attachment->ID, '', false, false, 'Download'),
+  	          "rawUrl" => wp_get_attachment_url($attachment->ID),
+  	          "target" => get_post_meta($attachment->ID, '_wp_attachment_image_alt', true)
   	    )
   	  );
   	}

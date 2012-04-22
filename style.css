@@ -34,3 +34,26 @@ a:hover {}
 
 
 /*****SUB CONTENT STYLES*******/
+
+
+/*****SOCIAL PAGE STYLES*******/
+
+.fb-like-box-header {
+    background-color: #3c5995; 
+    color: #fff; 
+    font-weight: 600; 
+    font-size: 18px;
+    margin: 0; 
+    padding: 0 0 0 10px; 
+    height: 25px; 
+    line-height: 25px; 
+}
+
+.social-link-wrapper {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.social-link {
+    margin-left: 5px;
+}
