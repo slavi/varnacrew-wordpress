@@ -41,28 +41,51 @@ function get_attachments($post_id) {
 	return $result;
 }
 
-function get_resources() {
-  $args = array(
-    'name' => 'resources',
-    'post_type' => 'page',
-    'showposts' => 1
-  );
-  
-  $resource_pages = get_posts($args);
-  
-  if( $resource_pages ) {
-    return get_attachments($resource_pages[0]->ID);
-  } else {
-    return array();
-  }
-  
-}
-
 function get_subpages() {
   global $post;
   
   $args = array( 'post_type' => 'page', 'numberposts' => -1, 'post_status' => null, 'post_parent' => $post->ID ); 
   return get_posts($args);
+}
+
+/****************** Resources **********************/
+function get_resources_page_id() {
+  $args = array('name' => 'resources', 'post_type' => 'page', 'showposts' => 1);
+  $resources_pages = get_posts($args);
+  
+  if(!$resources_pages) {
+    return -1;
+  }
+  
+  return $resources_pages[0]->ID;
+}
+
+function get_resources($footer_only) {
+  $result = array();
+  $resource_page_id = get_resources_page_id();
+  
+  if ($resource_page_id == -1) {
+    return $result;
+  }
+  
+  $args = array( 'post_type' => 'page', 'numberposts' => -1, 'post_status' => null, 'post_parent' => $resource_page_id ); 
+  $resources = get_posts($args);
+  
+  if ($resources) {
+    foreach ($resources as $resource_page) {
+      $include_in_footer = get_field("in_footer", $resource_page->ID);
+      
+      if (!$footer_only or $include_in_footer) {
+        array_push($result,
+    	    array("title" => $resource_page->post_title, 
+    	          "image" => get_field("image", $resource_page->ID),
+    	          "resource" => get_field("resource", $resource_page->ID))
+          );
+      }
+    }
+  }
+  
+  return $result;
 }
 
 ?>

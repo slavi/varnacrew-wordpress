@@ -1,14 +1,16 @@
 Useful
 <hr />
   <?php
-    $resources = get_resources();
+    $resources = get_resources(true);
     
     if ($resources) {
-      echo "<table>";
+      echo "<table><tr>";
     	foreach ( $resources as $resource ) {
-    	  echo "</tr><td>" . $resource["title"] . "</td><td>" . $resource["link"] . "</td></tr>";
+    	  echo 
+      	    "<td><img src='" . $resource["image"] . "'></td>" .
+      	    "<td><a href='" . $resource["resource"] . "'>" . $resource["title"] . "</a></td>";
     	}
-      echo "</table>";
+      echo "</tr></table>";
     }
   ?>
 
