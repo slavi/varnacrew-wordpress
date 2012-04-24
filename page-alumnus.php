@@ -4,9 +4,7 @@ Template Name: Alumnus Page
 */
 ?>
 
-<?php get_header(); ?>
-
-  <?php 
+<?php 
 	$subpages = get_subpages();
 
 	$featured_alumnus = array();
@@ -27,5 +25,4 @@ Template Name: Alumnus Page
 	echo "</tr><td><p>" . $alumni->post_content 			."</p></td></tr>";      	
     echo "</table>";
       
-  ?>
-<?php get_footer(); ?>
+?>

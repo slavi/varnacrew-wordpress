@@ -4,8 +4,6 @@ Template Name: Get Social Page
 */
 ?>
 
-<?php get_header(); ?>
-
 <div id="fb-root"></div>
 <script type="text/javascript">
 // <![CDATA[
@@ -36,5 +34,3 @@ Template Name: Get Social Page
 	</div>
 
 </div>
-
-<?php get_footer(); ?>
