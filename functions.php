@@ -1,6 +1,7 @@
 <?php
 
 add_theme_support( 'menus' ); 
+add_filter( 'nav_menu_css_class', 'parent_nav_class', 10, 2 );
 
 function is_under($title) {
   global $post;
@@ -86,6 +87,20 @@ function get_resources($footer_only) {
   }
   
   return $result;
+}
+
+function parent_nav_class( $classes = array(), $menu_item = false ) {
+    $menu_item_post_id = url_to_postid($menu_item->url);
+    if ( is_ancestor($menu_item_post_id) ) {
+        $classes[] = 'current-menu-item';
+    }
+    return $classes;
+}
+
+function is_ancestor($post_id) {
+    global $wp_query;
+    $ancestors = $wp_query->post->ancestors;
+    return in_array($post_id, $ancestors);
 }
 
 ?>
