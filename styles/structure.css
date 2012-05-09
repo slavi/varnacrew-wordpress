@@ -1,0 +1,219 @@
+/*------------------------------------------------------------------
+ 
+wemarkUP - Structure Style Sheet
+Last update: 03 January 2012
+
+------------------------------------------------------------------*/
+/*[1. Body ]*/
+html, body { height:100%; }
+
+body { font:14px/16px 'YanusCRegular', Arial, Tahoma, Verdana, sans-serif; color:#737474; background: url(../images/backgrounds/body-bg.jpg); }
+
+/*[2. Global classes ]*/
+.fnone { float:none; }
+.fleft, .column { float:left; }
+.fright { float:right;  }
+.no_bg { background:none !important; }
+.no_margin { margin:0 !important; }
+.no_padding { padding:0 !important; }
+.no_border { border:0 !important ;}
+.left { text-align:left }
+.center { text-align:center }
+.right { text-align:right }
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0; }
+
+.clearfix:after {
+	clear: both;
+	content:' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0; }
+	
+.clearfix { display: inline-block; }
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+
+@font-face {
+    font-family: 'YanusCBold';
+    src: url('ufonts.com_pt-yanus-bold-cyrillic-webfont.eot');
+    src: url('ufonts.com_pt-yanus-bold-cyrillic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('ufonts.com_pt-yanus-bold-cyrillic-webfont.woff') format('woff'),
+         url('ufonts.com_pt-yanus-bold-cyrillic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal; }
+
+@font-face {
+    font-family: 'YanusCRegular';
+    src: url('ufonts.com_pt-yanus-cyrillic-webfont.eot');
+    src: url('ufonts.com_pt-yanus-cyrillic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('ufonts.com_pt-yanus-cyrillic-webfont.woff') format('woff'),
+         url('ufonts.com_pt-yanus-cyrillic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal; }
+	
+.wrapper { width:960px; margin:0 auto; }
+
+/*[2. Header ]*/
+.header { height:213px; background:url(../images/backgrounds/header-bg.jpg) no-repeat top center; margin:0 0 20px; }
+.header .wrapper { height:213px; position:relative; }
+.header h1 a { background:url(../images/backgrounds/logo.png) no-repeat; width:246px; height:70px; display:block; position:absolute; line-height:9999px; overflow:hidden; top:64px; left:23px; }
+.header p.info { position:absolute; color:#fff; top:150px; left:487px; }
+
+.navigation { float:right; margin:85px 0 0; }
+.navigation li { float:left; display:inline; margin:0 0 0 30px; }
+.navigation a { float:left; height:28px; line-height:28px; font-size:16px; color:#fff; }
+.navigation current-menu-item a { border-left:1px solid #2e7c9d; border-top:1px solid #2e7c9d; padding:0 10px; -webkit-box-shadow:  0px 0px 29px 8px #fff; box-shadow:  0px 0px 29px 8px #fff; }
+.ie .navigation current-menu-item a  { background: #43B3E1; margin: -20px 20px 0 -20px; zoom: 1;
+	filter: progid:DXImageTransform.Microsoft.Shadow(Color=#B0DFF2, Strength=20, Direction=0),
+		progid:DXImageTransform.Microsoft.Shadow(Color=#B0DFF2, Strength=20, Direction=90),
+		progid:DXImageTransform.Microsoft.Shadow(Color=#B0DFF2, Strength=20, Direction=180),
+		progid:DXImageTransform.Microsoft.Shadow(Color=#B0DFF2, Strength=20, Direction=270);
+}
+.header .newsletter { background:url(../images/backgrounds/header-newsletter-btn.png) no-repeat; width:94px; height:32px; color:#fff; padding:7px 0 0 6px; font:11px/11px 'YanusCRegular'; display:block; top:18px; right:0; position:absolute; }
+.header .newsletter span { display:block; font:9px/9px 'YanusCRegular'; }
+
+/*[3. Content ]*/
+.cbox { border:1px solid #9f9f9f; background:#fff; position:relative; padding:12px; margin-bottom:30px; }
+.cbox.big { margin-bottom:45px; }
+.cbox.home { margin-bottom:66px; }
+.cbox .iwrapper { background:#f1f1f1; }
+.cbox.inner .iwrapper { padding:20px; }
+.cbox .carousel-arrow { display:block; width:30px; height:62px; position:absolute; top:50%; margin-top:-31px; background:url(../images/backgrounds/carousel-arrows.png) no-repeat; }
+.cbox .carousel-arrow.left { background-position:top left; left:-31px; }
+.cbox .carousel-arrow.right { background-position:top right; right:-31px; }
+.cbox .cpager { position:absolute; text-align:center; width:960px; bottom:-27px; }
+.cbox .cpager li { display:inline; text-align:center; margin:0 6px; }
+.cbox .cpager a { padding:0 8px; background:url(../images/backgrounds/pager.png) top right; height:17px; }
+.cbox .cpager .current a { background-position:-2px top; }
+
+.cbox .shadow { position:absolute; }
+.cbox .shadow.right { background:url(../images/backgrounds/shadow-right-big.png) no-repeat; width:12px; height:257px; top:0; right:-12px; }
+.cbox .shadow.bottom { background:url(../images/backgrounds/shadow-bottom-big.png) no-repeat; width:965px; height:10px; left:-5px; bottom:-10px; }
+.cbox.small .shadow.bottom { background:url(../images/backgrounds/shadow-bottom-small.png) no-repeat; width:463px; height:13px; left:-3px; bottom:-13px; }
+
+.tabs { height:35px; position:relative; z-index:10; }
+.tabs li { float:left; margin:0 0 0 35px; line-height:35px; height:35px; }
+.tabs li:first-child { margin-left:14px; }
+.tabs current-menu-item, .tabs .title { color:#01acdd; padding:0 10px; position:relative; border:1px solid #999; border-bottom:0 none; background:#fff; }
+.tabs current-menu-item { margin-right:-16px; }
+.tabs .title{ font-size:20px; margin:0!important; }
+.tabs .shadow { background:url(../images/backgrounds/tabs-shadow.png) no-repeat; width:10px; height:35px; display:block; position:absolute; bottom:0; right:-11px; }
+.tabs a { float:left; color:#828181; font:15px/35px 'YanusCBold'; }
+
+.grid_1 { width:196px; }
+.grid_2 { width:500px; padding:0 20px 0 0; }
+.grid_3 { width:178px; }
+
+/*[3.1. Fund raising ]*/
+.left-picture { width:166px; overflow:hidden; border:5px solid #fff; }
+.tiny-mce { line-height:19px; }
+.tiny-mce p { padding:0 0 1em; }
+.tiny-mce a { color:#43b3e2; }
+a.donate-online { float:right; background:url(../images/backgrounds/donate-online.png) no-repeat; width:100px; height:31px; padding-left:10px; color:#fff; font:12px/29px 'YanusCBold'; }
+
+/*[3.2. Programs ]*/
+.left-gallery { overflow:hidden; padding:17px 0 0; }
+.left-gallery li { float:left; display:inline; margin:0 2px 7px 0; } 
+.left-gallery a { display:block; width:38px; height:37px; overflow:hidden; border:2px solid #fff; }
+h4.summer-school { font-weight:300; font-size:14px; line-height:14px; padding:0 0 5px; }
+.school-list { background:#fdfdfd; border-top:1px solid #d4d4d4; border-bottom:1px solid #d4d4d4; padding:20px 15px 12px; font-size:13px; line-height:13px; margin:0 0 15px; } 
+.school-list li { padding:0 0 8px; }
+.school-list a { color:#767676; }
+a.summer-school { float:left; background:url(../images/backgrounds/current-summer.jpg) no-repeat; width:166px; height:31px; padding-left:10px; color:#fff; font:12px/29px 'YanusCBold'; }
+
+/*[3.3. Resources ]*/
+.resources { }
+.resources li.main { width: 870px; }
+.resources li li { margin:0 0 0 111px; height:66px; padding:7px 0 0; border-top:1px solid #bfbfbf; display:block; font:16px/66px 'YanusCBold'; }
+.resources li li:first-child { border:0 none; }
+.resources a { color:#919090; }
+.resources a span { font-family:'YanusCRegular'; font-style:italic; }
+.resources a.download { float:right; color:#fff; background:url(../images/backgrounds/download-btn.jpg) no-repeat; width:76px; height:31px; padding-left:10px; font-size:11px; line-height:31px; margin:15px 0 0; }
+.resources .icon { float:left; width:92px; height:66px; margin-left:-92px; background:url(../images/backgrounds/useful-icons.png) no-repeat; }
+.resources .icon.cv { background-position:0 10px; }
+.resources .icon.doc { background-position:-180px 10px; }
+.resources .icon.example { background-position:-377px 10px; }
+
+/*[3.4. People behind ]*/
+.carousel-3d { width:809px; margin:0 auto; }
+.team-images { width:780px; height: 207px; margin: 50px auto 0px auto; }
+.team-images li { cursor: pointer; text-align: center; width:185px; height: 300px; }
+.team-images li.roundabout-in-focus  { cursor: default; }
+.team-images img { width: 95%; border:5px solid #fff; }
+.team-images li p { font-size:120%; line-height:18px; padding:5px 0 0; }
+
+.team-texts { width:540px; margin:15px auto 0;}
+.team-texts li { display: none; }
+
+/*[3.4. Home page ]*/
+.carousel-home { overflow:hidden; height:260px; }
+.carousel-home li { float:left; display:inline; width:160px; height:260px; padding:0 14px 0 0; margin:0 14px 0 0; background:url(../images/backgrounds/home-carousel-spacer.png) no-repeat top right; }
+.carousel-home h2 a { font-size:18px; line-height:18px; color:#01acdd; font-weight:300; }
+.carousel-home .thumb { width:155px; height:58px; overflow:hidden; margin:10px 0 16px; }
+.carousel-home p { line-height:15px; }
+
+.cbox.small { width:434px; float:left; margin-right:40px; }
+.cbox.small.second { margin-right:0; }
+.cbox.small .iwrapper { padding:24px 13px 13px; }
+.cbox.small h3.box-title { background:url(../images/backgrounds/home-title-bg.png) no-repeat; width:182px; height:42px; padding-left:14px; font:20px/42px 'YanusCBold'; color:#fff; position:absolute; top:-16px; left:12px; }
+.photos-home { overflow:hidden; margin-bottom:-4px; }
+.photos-home .big { float:left; width:244px; overflow:hidden; border:5px solid #fff; margin-right:10px; }
+.photos-home ul { float:left; width:144px; }
+.photos-home ul li { float:left; border:2px solid #fff; margin:0 6px 6px 0; }
+.photos-home ul li.second { margin-right:0; }
+.photos-home ul li a { display:block; width:65px; height:61px; overflow:hidden; }
+
+.calendar-home .event-thumb { float:left; width:175px; overflow:hidden; border:5px solid #fff; margin:0 18px 0 0; }
+.calendar-home h3.next-event { border-top:1px solid #c5c5c5; margin:12px 0 0; padding:10px 0 0; font-size:18px; font-weight:300; }
+.calendar-home h3.title { padding:0 0 5px; }
+.calendar-home h3.title a { font-size:20px; color:#757575; font-weight:300; line-height:20px; }
+.calendar-home h4 { font-size:14px; font-weight:300; padding:0 0 15px; line-height:14px; }
+
+.featured-home { padding:0 0 23px 202px; overflow:hidden; }
+.featured-home .member-thumb { float:left; width:175px; overflow:hidden; margin-left:-204px; border:5px solid #fff; }
+.featured-home h3 { padding:0 0 15px; }
+.featured-home h3 a { font-size:21px; line-height:21px; color:#737474; font-weight:300; }
+.featured-home a.more, .calendar-home a.more { float:right; background:url(../images/backgrounds/right-arrow.png) no-repeat center right; padding:0 15px 0 0; color:#737474; }
+
+.join-home ul { float:right; overflow:hidden; margin:-12px 0 5px; }
+.join-home li { float:left; margin:0 0 0 4px; }
+.join-home a { float:left; background:url(../images/backgrounds/social-icons.png) no-repeat; width:28px; height:29px; overflow:hidden; line-height:9999px; }
+.join-home a.linkedin { background-position:top left; }
+.join-home a.twitter { background-position:-33px top; }
+.join-home a.rss { background-position:-65px top; }
+.join-home a.fb { background-position: top right; }
+.join-home .share { border:5px solid #fff; clear:both; }
+
+.home-newsletter { width:267px; margin:0 auto; position:relative; padding:0 0 40px; }
+.home-newsletter a { background:url(../images/backgrounds/subscribe-btn.png) no-repeat; width:120px; height:43px; padding:8px 0 0; color:#fff; font:20px/20px 'YanusCBold'; display:block; text-align:center; position:relative; z-index:20; margin:0 auto; }
+.home-newsletter a span { display:block; font:12px/12px 'YanusCRegular'; }
+form.newsletter { background:url(../images/backgrounds/newsletter-bg.png) no-repeat; width:267px; height:119px; padding:54px 0 0; margin:-34px auto 0; display: none; }
+form.newsletter .textfield { width:164px; height:17px; padding:12px 14px; margin:0 auto 10px; font:14px/14px 'YanusCRegular'; color:#929191; border:0 none; background:#fff; display:block; }
+form.newsletter .submit { border-right:1px solid #b3b3b3; border-bottom:1px solid #b3b3b3; background:#f1f1f1; color:#959595; font:14px/14px 'YanusCBold'; width:81px; height:27px; display:block; margin:0 auto; }
+
+/*[4. Footer ]*/
+.footer h3 { border-bottom:1px solid #b7b7b7; font-size:16px; line-height:16px; padding:0 0 6px 13px; margin:0 0 10px; }
+.useful-list { padding:0 0 65px 18px; }
+.useful-list li { float:left; margin:0 50px 0 0; }
+.useful-list a { float:left; width:75px; height:45px; padding:12px 60px 0 0; color:#929191; font:13px/15px 'YanusCBold'; background:url(../images/backgrounds/useful-icons.png) no-repeat; }
+.useful-list a.cv { background-position:79px 0; }
+.useful-list a.doc { background-position:-100px 0; }
+.useful-list a.example { background-position:-288px 0; width:90px; padding-right:76px; }
+.footer a.see-all { float:right; padding:0 15px 0 0; color:#757575; background:url(../images/backgrounds/right-arrow.png) no-repeat right 6px; }
+.copyrights { border-top:1px solid #b7b7b7; padding:10px 0 30px; font-size:11px; line-height:13px; }
+.copyrights .copy { float:left; width:412px; color:#b2b1b1; }
+.copyrights .accounts { float:left; width:440px; color:#8e8d8d; }
+.copyrights .created-by { float:right; color:#b2b1b1; }
+
+.cbox.home .iwrapper { padding:13px 0 10px 17px; }
+.cbox.big .iwrapper { padding:20px 45px 20px 20px;  }
+.jcarousel-clip { overflow: hidden; }

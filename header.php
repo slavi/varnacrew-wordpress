@@ -5,32 +5,69 @@
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta content="" name="description"/>
+  <meta content="" name="keywords"/>
+  <meta content="" name="Author"/>
+  <meta content="" name="Copyright"/>
+  <meta content="BG" http-equiv="Content-Language"/>
+  <meta content="" name="geo.placename"/>
+  <meta content="" name="geo.position"/>
+  <meta content="index,follow" name="robots"/>
+
+  <link href="/images/other/favicon.ico" rel="Shortcut Icon" />
+
+  <title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
+
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>"/>
+  <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+  
+  <script src="<?php bloginfo('template_url'); ?>/scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
+  <script src="<?php bloginfo('template_url'); ?>/scripts/jquery.carousel-0.9.8.min.js" type="text/javascript"></script>
+  <script src="<?php bloginfo('template_url'); ?>/scripts/jquery.roundabout.min.js" type="text/javascript"></script>
+  <script src="<?php bloginfo('template_url'); ?>/scripts/css_browser_selector.js" type="text/javascript"></script>
+  <script src="<?php bloginfo('template_url'); ?>/scripts/main.js" type="text/javascript"></script>
+
+  <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
+  <?php wp_head(); ?>
 		
-		<title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
-		
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>"/>
-		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-		
-		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
-		<?php wp_head(); ?>
 	</head>
 	
-	<div <?php body_class(); ?>>
+	<body <?php body_class(); ?>>
 	
-		<div style="header">
-			<?php wp_nav_menu( array('menu' => 'Main', 'container' => false, )); ?>
-			<!-- Nav level 2 -->
-			<?php if (is_under("Programs")) wp_nav_menu( array('menu' => 'Programs', 'container' => false, )); ?>
-			<?php if (is_under("Resources")) wp_nav_menu( array('menu' => 'Resources', 'container' => false, )); ?>
-			<?php if (is_under("Fundraising")) wp_nav_menu( array('menu' => 'Fundraising', 'container' => false, )); ?>
-			<?php if (is_under("People Behind")) wp_nav_menu( array('menu' => 'People Behind', 'container' => false, )); ?>
-			<!-- Nav level 3 -->
-			<?php if (is_under("Academic Runs")) wp_nav_menu( array('menu' => 'Runs', 'container' => false, )); ?>
-			<?php if (is_under("Alumni Reunions")) wp_nav_menu( array('menu' => 'Reunions', 'container' => false, )); ?>
-			<?php if (is_under("Competitions")) wp_nav_menu( array('menu' => 'Competitions', 'container' => false, )); ?>
-			<?php if (is_under("LSE Summer School")) wp_nav_menu( array('menu' => 'LSE', 'container' => false, )); ?>
-			<?php if (is_under("Seminars")) wp_nav_menu( array('menu' => 'Seminars', 'container' => false, )); ?>
-			<?php if (is_under("Workshops")) wp_nav_menu( array('menu' => 'Workshops', 'container' => false, )); ?>
+		<div class="header">
+		  
+		  <div class="wrapper">
+		    
+      <h1><a href="javascript:;" title="The Alexander Foundation">The Alexander Foundation</a></h1>
+
+			<?php wp_nav_menu( array('menu' => 'Main', 'container' => false, 'menu_class' => 'navigation')); ?>
+			
+      <p class="info">The primary goal of the foundation is to promote and support the development of the Bulgarian university education through a number of initiatives including the organisation and sponsorship of conferences.</p>
+      
+      <a href="javascript:;" title="Subscribe for your newsletter" class="newsletter">Subscribe<span>for your newsletter</span></a>
+
+			</div>
 		</div>
+		
+		<div class="wrapper">
+    
+      <!-- CONTENT - Start -->
+      <div class="content clearfix">
+
+  			<!-- Nav level 2 -->
+  			<?php if (is_under("Programs")) wp_nav_menu( array('menu' => 'Programs', 'container' => false, 'menu_class' => 'tabs' )); ?>
+  			<?php if (is_under("Resources")) wp_nav_menu( array('menu' => 'Resources', 'container' => false,'menu_class' => 'tabs' )); ?>
+  			<?php if (is_under("Fundraising")) wp_nav_menu( array('menu' => 'Fundraising', 'container' => false, 'menu_class' => 'tabs'  )); ?>
+  			<?php if (is_under("People Behind")) wp_nav_menu( array('menu' => 'People Behind', 'container' => false, 'menu_class' => 'tabs' )); ?>
+      	<!-- Carousel -->
+          <div class="cbox home">
+          	<div class="iwrapper">
+        			<!-- Nav level 3 -->
+        			<?php if (is_under("Academic Runs")) wp_nav_menu( array('menu' => 'Runs', 'container' => false, )); ?>
+        			<?php if (is_under("Alumni Reunions")) wp_nav_menu( array('menu' => 'Reunions', 'container' => false, )); ?>
+        			<?php if (is_under("Competitions")) wp_nav_menu( array('menu' => 'Competitions', 'container' => false, )); ?>
+        			<?php if (is_under("LSE Summer School")) wp_nav_menu( array('menu' => 'LSE', 'container' => false, )); ?>
+        			<?php if (is_under("Seminars")) wp_nav_menu( array('menu' => 'Seminars', 'container' => false, )); ?>
+        			<?php if (is_under("Workshops")) wp_nav_menu( array('menu' => 'Workshops', 'container' => false, )); ?>

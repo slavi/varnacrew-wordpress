@@ -6,35 +6,7 @@ Author URI: http://www.varna.bg
 
 */
 
-/****BODY STYLES********/
-
-body { background: url('images/bkg.jpg') #FFF; color: #000; font: 14px Arial, Helvetica, sans-serif; margin: 0 auto; width: 996px; }
-
-
-h1 {}
-h2 {}
-h3 {}
-
-a { text-decoration: none; }
-a:hover {}
-
-/****HEADER STYLES*******/
-
-.current-menu-item {
-    font-weight: bold;
-}
-
-/*****NAV STYLES*******/
-
-
-/*****FOOTER STYLES*******/
-
-
-/*****HOME CONTENT STYLES*******/
-
-
-/*****SUB CONTENT STYLES*******/
-
+@import url("styles/master.css");
 
 /*****SOCIAL PAGE STYLES*******/
 
