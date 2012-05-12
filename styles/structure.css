@@ -186,7 +186,8 @@ a.summer-school { float:left; background:url(../images/backgrounds/current-summe
 
 .join-home ul { float:right; overflow:hidden; margin:-12px 0 5px; }
 .join-home li { float:left; margin:0 0 0 4px; }
-.join-home a { float:left; background:url(../images/backgrounds/social-icons.png) no-repeat; width:28px; height:29px; overflow:hidden; line-height:9999px; }
+/* Kremena: using custom social icons (per social network) instead of social-icons.png */
+.join-home a { margin: 10px 5px 0 0; float:left; /*background:url(../images/backgrounds/social-icons.png) no-repeat; width:28px; height:29px; overflow:hidden; line-height:9999px;*/ }
 .join-home a.linkedin { background-position:top left; }
 .join-home a.twitter { background-position:-33px top; }
 .join-home a.rss { background-position:-65px top; }

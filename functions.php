@@ -45,7 +45,7 @@ function get_attachments($post_id) {
 function get_subpages() {
   global $post;
   
-  $args = array( 'post_type' => 'page', 'numberposts' => -1, 'post_status' => null, 'post_parent' => $post->ID ); 
+  $args = array( 'post_type' => 'page', 'numberposts' => -1, 'post_status' => null, 'post_parent' => $post->ID , 'orderby' => 'menu_order', 'order' => 'ASC'); 
   return get_posts($args);
 }
 

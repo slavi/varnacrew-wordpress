@@ -11,26 +11,27 @@ Template Name: Get Social Page
 // ]]>
 </script>
 
-<div style="width: 400px;">
-	
-	<div class="social-link-wrapper">
+<h3 class="box-title">Join us</h3>
+<div class="join-home">
+	<ul class="clearfix">		
   	<?php 
       $attachments = get_attachments($post->ID);
       if ($attachments) {
       	foreach ( $attachments as $attachment ) {
-		  echo "<a class='social-link' href='" . $attachment["target"] . "' target='_blank'>"; 
+		  echo "<li><a class='" . $attachment["title"] . "' href='" . $attachment["target"] . "' target='_blank'>"; 
 		  echo "<img src='" . $attachment["rawUrl"] . "' alt='" . $attachment["title"] . "'/>";
-		  echo "</a>";
+		  echo "</a></li>";
       	}
-        echo "</table>";
       }
   	?>
-	</div>
+	</ul>
 
-	<div class="fb-like-box-header">facebook</div>
-	<div class="fb-like-box" data-href="http://www.facebook.com/facebook" 
-	 		data-width="400" data-height="180" data-show-faces="true" 		 
-			data-stream="false" data-header="false" data-border-color="#fff">
+	<div class="share">
+		<div class="fb-like-box-header">facebook</div>
+		<div class="fb-like-box" data-href="http://www.facebook.com/facebook" 
+	 			data-width="400" data-height="193" data-show-faces="true" 		 
+				data-stream="false" data-header="false" data-border-color="#fff">
+			</div>
 	</div>
 
 </div>
