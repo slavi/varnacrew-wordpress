@@ -70,5 +70,7 @@
         			<?php if (is_under("Workshops")) wp_nav_menu( array('menu' => 'Workshops', 'container' => false, )); ?>
 
 		<!-- Carousel -->
+		<?php if ($post->post_name != "home") { ?>
 		<div class="cbox inner">
 			<div class="iwrapper clearfix">
+		<?php } ?>

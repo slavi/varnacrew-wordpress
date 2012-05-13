@@ -1,7 +1,9 @@
+			<?php if ($post->post_name != "home") { ?>
             </div>
             <div class="shadow right"></div>
             <div class="shadow bottom"></div>
         </div>
+		<?php } ?>
         <!-- / Carousel -->
     
     </div>
