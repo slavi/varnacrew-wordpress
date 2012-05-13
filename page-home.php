@@ -3,6 +3,7 @@
 Template Name: Home Page
 */
 ?>
+
 <?php get_header(); ?>
 
 <?php
@@ -11,3 +12,7 @@ Template Name: Home Page
 ?>
 
 <?php get_footer(); ?>
+
+<script type="text/javascript">
+	$(".cbox.inner").removeClass("cbox inner");
+</script>

@@ -5,8 +5,8 @@ Template Name: Resources Page
 ?>
 
 <?php get_header(); ?>
-
-  <?php 
+		
+<?php 
   	$resources = get_resources(false);
       
       if ($resources) {
@@ -21,5 +21,6 @@ Template Name: Resources Page
       	}
         echo "</table>";
       }
-  ?>
+?>
+
 <?php get_footer(); ?>

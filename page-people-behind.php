@@ -5,9 +5,7 @@ Template Name: People Behind Page
 ?>
 
 <?php get_header(); ?>
-
-<div class="cbox home">
-	<div class="iwrapper">
+	
 <?php 
     $people_behind = get_subpages();
 ?>
@@ -27,8 +25,5 @@ Template Name: People Behind Page
    	}
  ?>
 </ul>
-
-	</div>
-</div>
 
 <?php get_footer(); ?>
