@@ -71,8 +71,8 @@ body { font:14px/16px 'YanusCRegular', Arial, Tahoma, Verdana, sans-serif; color
 .navigation { float:right; margin:85px 0 0; }
 .navigation li { float:left; display:inline; margin:0 0 0 30px; }
 .navigation a { float:left; height:28px; line-height:28px; font-size:16px; color:#fff; }
-.navigation current-menu-item a { border-left:1px solid #2e7c9d; border-top:1px solid #2e7c9d; padding:0 10px; -webkit-box-shadow:  0px 0px 29px 8px #fff; box-shadow:  0px 0px 29px 8px #fff; }
-.ie .navigation current-menu-item a  { background: #43B3E1; margin: -20px 20px 0 -20px; zoom: 1;
+.navigation .current-menu-item a { border-left:1px solid #2e7c9d; border-top:1px solid #2e7c9d; padding:0 10px; -webkit-box-shadow:  0px 0px 29px 8px #fff; box-shadow:  0px 0px 29px 8px #fff; }
+.ie .navigation .current-menu-item a  { background: #43B3E1; margin: -20px 20px 0 -20px; zoom: 1;
 	filter: progid:DXImageTransform.Microsoft.Shadow(Color=#B0DFF2, Strength=20, Direction=0),
 		progid:DXImageTransform.Microsoft.Shadow(Color=#B0DFF2, Strength=20, Direction=90),
 		progid:DXImageTransform.Microsoft.Shadow(Color=#B0DFF2, Strength=20, Direction=180),
@@ -101,10 +101,10 @@ body { font:14px/16px 'YanusCRegular', Arial, Tahoma, Verdana, sans-serif; color
 .cbox.small .shadow.bottom { background:url(../images/backgrounds/shadow-bottom-small.png) no-repeat; width:463px; height:13px; left:-3px; bottom:-13px; }
 
 .tabs { height:35px; position:relative; z-index:10; }
-.tabs li { float:left; margin:0 0 0 35px; line-height:35px; height:35px; }
+.tabs li { float:left; margin:0 0 0 33px; line-height:35px; height:35px; }
 .tabs li:first-child { margin-left:14px; }
-.tabs current-menu-item, .tabs .title { color:#01acdd; padding:0 10px; position:relative; border:1px solid #999; border-bottom:0 none; background:#fff; }
-.tabs current-menu-item { margin-right:-16px; }
+.tabs .current-menu-item a, .tabs .title { color:#01acdd; font:15px/35px 'YanusCRegular'; padding:0 10px; position:relative; border:1px solid #999; border-bottom:0 none; background:#fff; }
+.tabs .current-menu-item { margin-right:-16px; }
 .tabs .title{ font-size:20px; margin:0!important; }
 .tabs .shadow { background:url(../images/backgrounds/tabs-shadow.png) no-repeat; width:10px; height:35px; display:block; position:absolute; bottom:0; right:-11px; }
 .tabs a { float:left; color:#828181; font:15px/35px 'YanusCBold'; }
@@ -114,11 +114,12 @@ body { font:14px/16px 'YanusCRegular', Arial, Tahoma, Verdana, sans-serif; color
 .grid_3 { width:178px; }
 
 /*[3.1. Fund raising ]*/
-.left-picture { width:166px; overflow:hidden; border:5px solid #fff; }
+.left-picture { width:166px; overflow:hidden; border:5px solid #fff; margin-left: auto; margin-right: auto; margin-top: auto; margin-bottom: auto; }
 .tiny-mce { line-height:19px; }
 .tiny-mce p { padding:0 0 1em; }
 .tiny-mce a { color:#43b3e2; }
 a.donate-online { float:right; background:url(../images/backgrounds/donate-online.png) no-repeat; width:100px; height:31px; padding-left:10px; color:#fff; font:12px/29px 'YanusCBold'; }
+img.fundraising { background:url(../images/pages/fundraising.jpg) no-repeat; }
 
 /*[3.2. Programs ]*/
 .left-gallery { overflow:hidden; padding:17px 0 0; }
@@ -127,8 +128,16 @@ a.donate-online { float:right; background:url(../images/backgrounds/donate-onlin
 h4.summer-school { font-weight:300; font-size:14px; line-height:14px; padding:0 0 5px; }
 .school-list { background:#fdfdfd; border-top:1px solid #d4d4d4; border-bottom:1px solid #d4d4d4; padding:20px 15px 12px; font-size:13px; line-height:13px; margin:0 0 15px; } 
 .school-list li { padding:0 0 8px; }
+.school-list .current-menu-item { font-weight: bold; }
 .school-list a { color:#767676; }
 a.summer-school { float:left; background:url(../images/backgrounds/current-summer.jpg) no-repeat; width:166px; height:31px; padding-left:10px; color:#fff; font:12px/29px 'YanusCBold'; }
+.program-main { line-height:19px; }
+.program-main p { padding:0 0 1em; }
+.program-main a { color:#43b3e2; }
+img.program-lse { background:url(../images/pages/lse.jpg) no-repeat; }
+img.program-competitions { background:url(../images/pages/competitions.jpg) no-repeat; }
+img.program-seminars { background:url(../images/pages/seminars.jpg) no-repeat; }
+
 
 /*[3.3. Resources ]*/
 .resources { }

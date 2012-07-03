@@ -31,6 +31,12 @@ $(function() {
 		}
 	});
 	$(".team-texts li").eq(0).show();
+	$(".carousel-arrow.people.left").click(function(e) {
+		$(".team-images").roundabout("animateToPreviousChild");
+	});
+	$(".carousel-arrow.people.right").click(function(e) {
+		$(".team-images").roundabout("animateToNextChild");
+	});
 });
 
 

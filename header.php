@@ -26,6 +26,8 @@
   <script src="<?php bloginfo('template_url'); ?>/scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
   <script src="<?php bloginfo('template_url'); ?>/scripts/jquery.carousel-0.9.8.min.js" type="text/javascript"></script>
   <script src="<?php bloginfo('template_url'); ?>/scripts/jquery.roundabout.min.js" type="text/javascript"></script>
+  <script src="<?php bloginfo('template_url'); ?>/scripts/jquery.roundabout-shapes.min.js" type="text/javascript"></script>
+
   <script src="<?php bloginfo('template_url'); ?>/scripts/css_browser_selector.js" type="text/javascript"></script>
   <script src="<?php bloginfo('template_url'); ?>/scripts/main.js" type="text/javascript"></script>
 
@@ -45,9 +47,6 @@
 			<?php wp_nav_menu( array('menu' => 'Main', 'container' => false, 'menu_class' => 'navigation')); ?>
 			
       <p class="info">The primary goal of the foundation is to promote and support the development of the Bulgarian university education through a number of initiatives including the organisation and sponsorship of conferences.</p>
-      
-      <a href="javascript:;" title="Subscribe for your newsletter" class="newsletter">Subscribe<span>for your newsletter</span></a>
-
 			</div>
 		</div>
 		
@@ -55,20 +54,11 @@
     
       <!-- CONTENT - Start -->
       <div class="content clearfix">
-
   			<!-- Nav level 2 -->
   			<?php if (is_under("Programs")) wp_nav_menu( array('menu' => 'Programs', 'container' => false, 'menu_class' => 'tabs' )); ?>
   			<?php if (is_under("Resources")) wp_nav_menu( array('menu' => 'Resources', 'container' => false,'menu_class' => 'tabs' )); ?>
   			<?php if (is_under("Fundraising")) wp_nav_menu( array('menu' => 'Fundraising', 'container' => false, 'menu_class' => 'tabs'  )); ?>
   			<?php if (is_under("People Behind")) wp_nav_menu( array('menu' => 'People Behind', 'container' => false, 'menu_class' => 'tabs' )); ?>
-        			<!-- Nav level 3 -->
-        			<?php if (is_under("Academic Runs")) wp_nav_menu( array('menu' => 'Runs', 'container' => false, )); ?>
-        			<?php if (is_under("Alumni Reunions")) wp_nav_menu( array('menu' => 'Reunions', 'container' => false, )); ?>
-        			<?php if (is_under("Competitions")) wp_nav_menu( array('menu' => 'Competitions', 'container' => false, )); ?>
-        			<?php if (is_under("LSE Summer School")) wp_nav_menu( array('menu' => 'LSE', 'container' => false, )); ?>
-        			<?php if (is_under("Seminars")) wp_nav_menu( array('menu' => 'Seminars', 'container' => false, )); ?>
-        			<?php if (is_under("Workshops")) wp_nav_menu( array('menu' => 'Workshops', 'container' => false, )); ?>
-
 		<!-- Carousel -->
 		<?php if ($post->post_name != "home") { ?>
 		<div class="cbox inner">

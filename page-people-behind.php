@@ -10,6 +10,9 @@ Template Name: People Behind Page
     $people_behind = get_subpages();
 ?>
 
+<a href="javascript:;" title="" class="left carousel-arrow people"></a>
+<a href="javascript:;" title="" class="right carousel-arrow people"></a>
+
 <!-- 3D Carousel -->
 <ul class="team-images">
  <?php

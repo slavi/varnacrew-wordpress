@@ -27,8 +27,8 @@ Template Name: Get Social Page
 	</ul>
 
 	<div class="share">
-		<div class="fb-like-box-header">facebook</div>
-		<div class="fb-like-box" data-href="http://www.facebook.com/facebook" 
+		<div class="fb-like-box-header">Aleksander Foundation</div>
+		<div class="fb-like-box" data-href="https://www.facebook.com/AleksanderFoundation" 
 	 			data-width="400" data-height="193" data-show-faces="true" 		 
 				data-stream="false" data-header="false" data-border-color="#fff">
 			</div>
