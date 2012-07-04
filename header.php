@@ -55,10 +55,11 @@
       <!-- CONTENT - Start -->
       <div class="content clearfix">
   			<!-- Nav level 2 -->
-  			<?php if (is_under("Programs")) wp_nav_menu( array('menu' => 'Programs', 'container' => false, 'menu_class' => 'tabs' )); ?>
-  			<?php if (is_under("Resources")) wp_nav_menu( array('menu' => 'Resources', 'container' => false,'menu_class' => 'tabs' )); ?>
-  			<?php if (is_under("Fundraising")) wp_nav_menu( array('menu' => 'Fundraising', 'container' => false, 'menu_class' => 'tabs'  )); ?>
-  			<?php if (is_under("People Behind")) wp_nav_menu( array('menu' => 'People Behind', 'container' => false, 'menu_class' => 'tabs' )); ?>
+			<?php $shadow = "<span class='shadow'></span>" ?>
+  			<?php if (is_under("Programs")) wp_nav_menu( array('menu' => 'Programs', 'container' => false, 'menu_class' => 'tabs', 'after' => $shadow)); ?>
+  			<?php if (is_under("Resources")) wp_nav_menu( array('menu' => 'Resources', 'container' => false,'menu_class' => 'tabs', 'after' => $shadow )); ?>
+  			<?php if (is_under("Fundraising")) wp_nav_menu( array('menu' => 'Fundraising', 'container' => false, 'menu_class' => 'tabs', 'after' => $shadow  )); ?>
+  			<?php if (is_under("People Behind")) wp_nav_menu( array('menu' => 'People Behind', 'container' => false, 'menu_class' => 'tabs', 'after' => $shadow )); ?>
 		<!-- Carousel -->
 		<?php if ($post->post_name != "home") { ?>
 		<div class="cbox inner">

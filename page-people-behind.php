@@ -24,7 +24,7 @@ Template Name: People Behind Page
 <ul class="team-texts">
  <?php
    	foreach ( $people_behind as $person_page ) {
-   	  echo "<li>" . $person_page->post_content . "</li>";
+   	  echo "<li>" . wpautop($person_page->post_content) . "</li>";
    	}
  ?>
 </ul>

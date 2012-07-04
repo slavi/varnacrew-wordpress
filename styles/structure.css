@@ -101,12 +101,12 @@ body { font:14px/16px 'YanusCRegular', Arial, Tahoma, Verdana, sans-serif; color
 .cbox.small .shadow.bottom { background:url(../images/backgrounds/shadow-bottom-small.png) no-repeat; width:463px; height:13px; left:-3px; bottom:-13px; }
 
 .tabs { height:35px; position:relative; z-index:10; }
-.tabs li { float:left; margin:0 0 0 33px; line-height:35px; height:35px; }
+.tabs li { float:left; margin:0 0 0 33px; line-height:35px; height:35px; position: relative; }
 .tabs li:first-child { margin-left:14px; }
 .tabs .current-menu-item a, .tabs .title { color:#01acdd; font:15px/35px 'YanusCRegular'; padding:0 10px; position:relative; border:1px solid #999; border-bottom:0 none; background:#fff; }
 .tabs .current-menu-item { margin-right:-16px; }
 .tabs .title{ font-size:20px; margin:0!important; }
-.tabs .shadow { background:url(../images/backgrounds/tabs-shadow.png) no-repeat; width:10px; height:35px; display:block; position:absolute; bottom:0; right:-11px; }
+.tabs .current-menu-item .shadow { background:url(../images/backgrounds/tabs-shadow.png) no-repeat; width:10px; height:35px; display:block; position:absolute; bottom:0; right:-10px; }
 .tabs a { float:left; color:#828181; font:15px/35px 'YanusCBold'; }
 
 .grid_1 { width:196px; }
